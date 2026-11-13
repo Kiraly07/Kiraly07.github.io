@@ -5,11 +5,10 @@ import { i18n } from "@i18n/translation";
 import MainGridLayout from "@layouts/MainGridLayout.astro";
 import { getSortedPostsList } from "../utils/content-utils";
 
-const sortedPostsList = (await getSortedPostsList()).map(post => ({
+const sortedPostsList = (await getSortedPostsList()).map((post) => ({
 	...post,
 	data: { ...post.data, category: post.data.category ?? undefined },
 }));
-
 ---
 
 <MainGridLayout title={i18n(I18nKey.archive)}>
