@@ -10,6 +10,7 @@ import { LinkPreset } from "./types/config";
 export const siteConfig: SiteConfig = {
 	title: "Góc ghi chép",
 	subtitle: "Trang cá nhân của bạn",
+	website: "https://Kiraly.github.io/",
 	lang: "vi", // Language code, e.g. 'en', 'zh_CN', 'ja', etc.
 	themeColor: {
 		hue: 145, // Default hue for the theme color, from 0 to 360. e.g. red: 0, teal: 200, cyan: 250, pink: 345
