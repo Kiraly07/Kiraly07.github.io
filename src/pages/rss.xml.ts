@@ -4,6 +4,10 @@ import { sortPostsByDate, filterDrafts } from '../lib/utils';
 import { siteConfig } from '../config';
 
 export async function GET(context) {
+  if (!siteConfig.pages.rss) {
+    return new Response('Not Found', { status: 404 });
+  }
+
   const allPosts = await getCollection('blog');
   const posts = sortPostsByDate(filterDrafts(allPosts));
 

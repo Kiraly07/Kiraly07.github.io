@@ -3,6 +3,7 @@ import { siteConfig } from '../config';
 
 const currentYear = new Date().getFullYear();
 const copyright = siteConfig.footer.copyright.replace('%YEAR%', currentYear.toString());
+const copyrightParts = copyright.match(/^(.*?)\[([^\]]+)\]\(([^)]+)\)(.*)$/);
 const social = siteConfig.social;
 ---
 
@@ -21,12 +22,16 @@ const social = siteConfig.social;
           {social.bluesky && <a href={social.bluesky} class="hover:text-primary transition-colors">[bluesky]</a>}
           {social.mastodon && <a href={social.mastodon} class="hover:text-primary transition-colors">[mastodon]</a>}
           {social.linkedin && <a href={social.linkedin} class="hover:text-primary transition-colors">[linkedin]</a>}
+          {social.discord && <a href={social.discord} class="hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">[discord]</a>}
+          {social.telegram && <a href={social.telegram} class="hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">[telegram]</a>}
           {social.rss && <a href={social.rss} class="hover:text-primary transition-colors">[rss]</a>}
         </div>
       )}
 
       <p class="text-muted-foreground">
-        {copyright}
+        {copyrightParts ? (
+          <>{copyrightParts[1]}<a href={copyrightParts[3]} class="hover:text-primary transition-colors">{copyrightParts[2]}</a>{copyrightParts[4]}</>
+        ) : copyright}
       </p>
     </div>
   </div>

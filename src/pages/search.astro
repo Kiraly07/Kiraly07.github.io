@@ -5,6 +5,10 @@ import { getCollection } from 'astro:content';
 import { filterDrafts, getUniqueTags } from '../lib/utils';
 import { siteConfig } from '../config';
 
+if (!siteConfig.pages.search) {
+  return Astro.rewrite('/404');
+}
+
 // Get all posts and tags
 const allPosts = await getCollection('blog');
 const posts = filterDrafts(allPosts);

@@ -6,7 +6,8 @@ import mdx from '@astrojs/mdx';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://example.com', // Replace with your site URL
+  devToolbar: { enabled: false },
+  site: 'https://Kiraly07.github.io/', // Replace with your site URL
   integrations: [
     mdx(),
     sitemap()

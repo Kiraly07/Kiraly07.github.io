@@ -5,6 +5,10 @@ import ProjectCard from '../components/ProjectCard.astro';
 import { siteConfig } from '../config';
 
 // Get projects from config
+if (!siteConfig.pages.projects) {
+  return Astro.rewrite('/404');
+}
+
 const projects = siteConfig.projects.items;
 ---
 

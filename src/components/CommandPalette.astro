@@ -1,13 +1,13 @@
 ---
 // Quick nav with Cmd+K
+import { siteConfig } from '../config';
 const navItems = [
   { label: 'Home', href: '/', shortcut: 'H' },
-  { label: 'About', href: '/about', shortcut: 'A' },
-  { label: 'Blog', href: '/blog', shortcut: 'B' },
-  { label: 'Projects', href: '/projects', shortcut: 'P' },
-  { label: 'Search', href: '/search', shortcut: 'S' },
-  { label: 'Archives', href: '/archives', shortcut: 'R' },
-  { label: 'RSS Feed', href: '/rss.xml', shortcut: 'F' },
+  ...(siteConfig.pages.blog ? [{ label: 'Blog', href: '/blog', shortcut: 'B' }] : []),
+  ...(siteConfig.pages.projects ? [{ label: 'Projects', href: '/projects', shortcut: 'P' }] : []),
+  ...(siteConfig.pages.search ? [{ label: 'Search', href: '/search', shortcut: 'S' }] : []),
+  ...(siteConfig.pages.archives ? [{ label: 'Archives', href: '/archives', shortcut: 'R' }] : []),
+  ...(siteConfig.pages.rss ? [{ label: 'RSS Feed', href: '/rss.xml', shortcut: 'F' }] : []),
 ];
 ---
 

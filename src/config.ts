@@ -3,10 +3,10 @@
 
 export const siteConfig = {
   // The basics
-  title: "Dotfiles",
-  description: "A minimal, terminal-inspired blog theme for developers",
-  author: "Your Name",
-  siteUrl: "https://yourdomain.com",
+  title: "Kiraly",
+  description: "",
+  author: "Kiraly",
+  siteUrl: "https://Kiraly07.github.io",
 
   // Header navigation
   header: {
@@ -15,26 +15,25 @@ export const siteConfig = {
       { text: "Blog", href: "/blog" },
       { text: "Projects", href: "/projects" },
     ],
-    
+
     // Let visitors change the color theme?
     showThemeSwitcher: false,
   },
 
   // Homepage hero
   hero: {
-    title: "Dotfiles",
-    
+    title: "Kiraly",
+
     // These rotate with a typewriter effect
     typewriterLines: [
-      "A minimal, terminal-inspired blog theme",
-      "Built with Astro 5.x and Tailwind CSS v4"
+      "I'm Vo Tuan Anh!",
     ],
-    
+
     // Wrap words in **asterisks** to highlight them
-    description: "A theme for **developers**, **writers**, and **creators**.",
-    
+    description: "**Pentester** & **CTF Player**.",
+
     terminalTitle: "welcome",
-    
+
     // primary: true = filled button
     ctaButtons: [
       { text: "[blog]", href: "/blog", primary: true },
@@ -53,12 +52,11 @@ export const siteConfig = {
 
   // Your links (leave empty to hide)
   social: {
-    github: "https://github.com/nabsiddiqui",
-    twitter: "",
-    linkedin: "",
-    bluesky: "",
-    mastodon: "",
-    email: "",
+    github: "https://github.com/Kiraly07",
+    linkedin: "https://www.linkedin.com/in/tuan-anh-vo-738480390/",
+    email: "votuananh.work@gmail.com",
+    discord: "https://discord.gg/ywmQTJrs",
+    telegram: "https://t.me/KiralyVo",
     rss: "/rss.xml",
   },
 
@@ -100,7 +98,7 @@ export const siteConfig = {
   // Footer
   footer: {
     statusMessage: "All systems operational",
-    copyright: "© %YEAR% Your Name",
+    copyright: "© %YEAR% Kiraly | Built with [nabsiddiqui](https://github.com/nabsiddiqui/dotfiles-astro-theme)",
     showSocialLinks: true,
   },
 
@@ -115,10 +113,10 @@ export const siteConfig = {
   // Toggle pages on/off
   pages: {
     blog: true,
-    projects: true,
+    projects: false,
     search: true,
     archives: true,
-    rss: true,
+    rss: false,
   },
 
   // Power user settings

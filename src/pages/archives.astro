@@ -5,6 +5,10 @@ import { getCollection } from 'astro:content';
 import { sortPostsByDate, filterDrafts } from '../lib/utils';
 import { siteConfig } from '../config';
 
+if (!siteConfig.pages.archives) {
+  return Astro.rewrite('/404');
+}
+
 // Get all posts
 const allPosts = await getCollection('blog');
 const posts = sortPostsByDate(filterDrafts(allPosts));
