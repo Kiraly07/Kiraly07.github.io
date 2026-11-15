@@ -7,7 +7,7 @@ import mdx from '@astrojs/mdx';
 // https://astro.build/config
 export default defineConfig({
   devToolbar: { enabled: false },
-  site: 'https://portfolio.work1.dpdns.org', // Replace with your site URL
+  site: 'https://Kiraly07.github.io', // Replace with your site URL
   integrations: [
     mdx(),
     sitemap()
