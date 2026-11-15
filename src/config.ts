@@ -47,7 +47,7 @@ export const siteConfig = {
     // clean-white, catppuccin-mocha, catppuccin-latte, rose-pine, rose-pine-dawn,
     // nord, nord-light, dracula, solarized-dark, solarized-light,
     // gruvbox-dark, gruvbox-light, tokyo-night, tokyo-night-light
-    defaultTheme: "clean-white",
+    defaultTheme: "tokyo-night",
   },
 
   // Your links (leave empty to hide)
